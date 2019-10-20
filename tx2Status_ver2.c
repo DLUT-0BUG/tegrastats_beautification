@@ -5,6 +5,7 @@
 #include "string.h"
 #include "time.h"
 #define BUF_SIZE 400
+#define UTC 8 //Beijing
 
 struct Status{
     int RAM_used, RAM_all, lfb[2];          //RAM 1952/7852MB (lfb 196x4MB) 
@@ -90,9 +91,9 @@ int DayTimeDisplay() {
     printf("\|  %d/%d/%d   ", 1900 + p->tm_year, 1 + p->tm_mon, p->tm_mday);
     printf("%s   ", wday[p->tm_wday]);
     if( p->tm_hour < 10 )
-        printf("0%d:",  p->tm_hour);
+        printf("0%d:",  p->tm_hour + UTC);
     else
-        printf("%d:",   p->tm_hour);
+        printf("%d:",   p->tm_hour + UTC);
     
     if( p->tm_min < 10 )
         printf("0%d:",  p->tm_min );
@@ -477,7 +478,13 @@ int main (void){
             printf("\|  \033[40;36mCPU%d\t\t%dMHz\t%d\%\033[0m\t\|", 4, tx2.CPU_freq[4], tx2.CPU_used[4]);
         }
         printf("  \033[40;34mSWAP\t%d\t%d\t%d\%\033[0m\t\|\n", tx2.SWAP_used, tx2.SWAP_all, tx2.SWAP_used * 100 / tx2.SWAP_all);
-
+        if(tx2.CPU_used[5] == -1) {
+            printf("\|  \033[40;35mCPU%d\tOFF\033[0m\t\t\t\|", 5);
+        }
+        else {
+            printf("\|  \033[40;36mCPU%d\t\t%dMHz\t%d\%\033[0m\t\|", 5, tx2.CPU_freq[5], tx2.CPU_used[5]);
+        }
+        printf("\t\t\t\t\|\n");
         printf("=================================================================\n");
         if(tx2.MCPU_temp >= 40.0) 
             if(tx2.MCPU_temp >= 60.0)
