@@ -9,4 +9,4 @@ ONLY tx2Status_ver2.c is usable.
 
 > sudo ./tx2status
 
-//[Effect](https://github.com/Laurenfrost/tegrastats-display/blob/master/Annotation.png)  
+![Effect](https://github.com/Laurenfrost/tegrastats-display/blob/master/Annotation.png)  
