@@ -13,5 +13,6 @@ ONLY tx2Status_ver2.c is usable.
 > sudo ./ManifoldStatus  
   
 *Be aware that this code base on the command "tegrastats", which Manifold 2 is not contained. You should copy one to the directory /usr/bin before your execution.*  
+*Besides, the Manifold 2-G version of "tegrastats" doesn't show the cache status. I make the same change in ManifoldStatus.c .*  
 
 ![Effect](https://github.com/Laurenfrost/tegrastats-display/blob/master/Annotation.png)  
