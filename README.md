@@ -12,6 +12,6 @@ ONLY tx2Status_ver2.c is usable.
 > gcc ManifoldStatus.c -o ManifoldStatus  
 > sudo ./ManifoldStatus  
   
-*Be aware that this code base on the command "tegrastats", which Manifold 2 is not contained. You should copy one to the directory /usr/bin before you execution.*  
+*Be aware that this code base on the command "tegrastats", which Manifold 2 is not contained. You should copy one to the directory /usr/bin before your execution.*  
 
 ![Effect](https://github.com/Laurenfrost/tegrastats-display/blob/master/Annotation.png)  
