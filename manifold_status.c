@@ -9,6 +9,10 @@
 //    Modifier: Linwei Ye  
 //    Date: 2019-12-02  
 //    Description: Change the code style based on "C++ Code Style Guide for Version Group of 0Bug in DUT".  
+// Modification: 2  
+//    Modifier: Linwei Ye  
+//    Date: 2019-12-13  
+//    Description: Fixed missing words  
 */
 #include "stdio.h"
 #include "stdlib.h"
@@ -550,6 +554,6 @@ int main (void)
             printf("=================================================================\n");
         
         }     
-        pclose(stream);
+        pclose(pstream);
         return 0;
     }
